@@ -25,5 +25,5 @@ colnames(categ)=c('Mutation category')
 plot=pheatmap(df,cluster_cols = FALSE,cluster_rows = FALSE, annotation_row = categ,display_numbers = TRUE,gaps_row = c(2,4,6,8,13),gaps_col = c(1,3,5,6,7,8,10),angle_col = 90, color = hcl.colors(100, "Inferno"),number_color = col_df)
 
 
-ggsave('heatmap2.png',plot = plot, width = 6756, height = 5383, units = "px",dpi=700)
+ggsave('heatmap_whole.png',plot = plot, width = 6756, height = 5383, units = "px",dpi=700)
 
