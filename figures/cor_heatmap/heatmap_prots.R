@@ -2,7 +2,7 @@ library(pheatmap)
 library(tidyverse)
 library(ggplot2)
 data=read.table(file = 'for_heatmap(1).tsv', sep = '\t', header = TRUE)
-row_names=c('Burried','Exposed','Charge change','No charge change','Hydrophobicity change','No hydrophobicity change','Polarity change','No polarity change','Large decrease in size','Slight decrease in size','No size change','Slight increase in size','Large increase in size','All')
+row_names=c('Buried','Exposed','Charge change','No charge change','Hydrophobicity change','No hydrophobicity change','Polarity change','No polarity change','Large decrease in size','Slight decrease in size','No size change','Slight increase in size','Large increase in size','All')
 #column_names=c('ESM','ACDC-NN 3D (AlphaFold)','ACDC-NN 3D (ESMFold)','ACDC-NN 3D','ACDC-NN sequence','DDGun 3D (AlphaFold)','DDGun 3D (ESMFold)','DDGun 3D','DDGun sequence','FoldX (AlphaFold)','FoldX (ESMFold)','FoldX','ThermoNet (AlphaFold)','Thermonet (ESMFold)','ThermoNet')
 data$Types.within.property=row_names
 df = data %>% column_to_rownames(., var = 'Types.within.property')
